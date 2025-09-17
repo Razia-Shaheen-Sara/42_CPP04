@@ -1,3 +1,10 @@
+#include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
+#include <iostream>
+
 int main()
 {
 const Animal* meta = new Animal();
@@ -9,6 +16,16 @@ i->makeSound(); //will output the cat sound!
 j->makeSound();
 meta->makeSound();
 
+const WrongAnimal* wrongMeta = new WrongAnimal();
+const WrongAnimal* wrongCat = new WrongCat();
+std::cout << wrongCat->getType() << " " << std::endl;
+wrongCat->makeSound(); //will output the WrongAnimal sound instead of the WrongCat sound because makeSound is NOT virtual
+wrongMeta->makeSound();
+delete meta;
+delete j;
+delete i;
+delete wrongMeta;
+delete wrongCat;
 
 return 0;
 }

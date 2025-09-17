@@ -6,7 +6,7 @@ CC = c++
 
 OBJ_DIR = obj
 
-SRC = main.cpp animal.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 # Object files corresponding to the source files
 OBJECTS = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
