@@ -1,0 +1,17 @@
+# Ignore build artifacts
+*.o
+*.out
+*.a
+*.so
+*.dSYM/
+*.dwarf
+*.relocation
+*.yml
+
+# Ignore executables
+animal
+animal_debug
+
+# Ignore temporary files
+*.swp
+*.tmp
